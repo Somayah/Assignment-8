@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>URLs Shortener</title>
+    <meta charset="utf-8">
+    <!-- Bootstrap core CSS -->
+    <link href="client/stylesheets/bootstrap.css" rel="stylesheet" type="text/css">
+  </head>
+
+  <body background="client/images/bg.png">
+    <div class="container">
+      <div class="page-header">
+          <h1>URL Shortener using MongoDB <small>Assignment 8 - Section2 CPSC 473</small></h1>
+      </div>
+      <!-- Start of panel contents of the long URL-->
+      <div class="panel panel-success">
+      <div class="panel-heading">Enter a long URL to shortener:</div>
+        <div class="panel-body">
+          <section>
+            <textarea id="url" name="url" rows="4" cols="100" placeholder="Long URL" class="form-control"></textarea>
+            <p>
+              <button id="shortenBtn" class="btn btn-default">Make a shortener URL</button>
+            </p>
+          </section>
+          <!-- Get shorten details of the long URL entered -->
+          <section id="originalToShortdetail"></section>
+        </div>
+       <!-- End of the panel of the long URL-->
+
+      <!-- Start of panel contents of orginal URL-->
+      <div class="panel-heading">Enter a short URL to get the orginal:</div>
+      <div class="panel-body">
+        <section>
+          <input id="shortUrl"  class="form-control" name="shortUrl" size=100 placeholder="short URL"/>
+          <p>
+            <button id="originalBtn" class="btn btn-default">Get an original URL</button>
+          </p>
+        </section>
+        <!-- Get oringanl detail of the entered shorten URL-->
+        <section id="shortToOriginaldetail"></section>
+    </div>
+    <!-- End of the panel of the orginal URL-->
+
+    <!-- Start of panel contents of Top URLs-->
+    <div class="panel-heading">Top URLs</div>
+    <div class="panel-body">
+      <div id="topUrl"></div>
+    </div>
+    <!-- End of the panel of the Top URLs-->
+
+    <script src="http://code.jquery.com/jquery-2.0.3.min.js"></script>
+    <script src="/client/javascripts/app.js"></script>
+  </body>
+</html>
