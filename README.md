@@ -6,7 +6,7 @@ a web page that ask the user to enter a long URL to shorten
 
 * The user can also get the orginal URL or the long URL of the givin shorten URL
 
-* The top ten most popular shortened URLs sorted by the number of times they have been followed.
+* The top ten most popular URLs sorted by the number of times they have been followed.
  
 
 ####Partners' names
