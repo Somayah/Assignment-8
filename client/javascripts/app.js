@@ -12,10 +12,11 @@ var main = function(){
               console.log('in client ~ topUrl data:'+data);
               var result = JSON.parse(data);
               if(result.length > 0){
+                var shortUrl;
                 result.forEach(function(element){
+                    shortUrl = element.id.toString(36);
                     $('#topUrl').
-                    append('<p>Request <span>'+element.frequency+' times is </span>          '+
-                      element.url+'</p>');
+                    append('<p>Request <span>'+element.frequency+' times is </span><a href="/'+shortUrl+'"> localhost:5000/'+shortUrl+'</a></span></p>');
                   });
               }else{
                 $('#topUrl').append('<h5>no url here</h5>');
@@ -87,7 +88,7 @@ var getOriginalURL = function(){
               var result = JSON.parse(data);
               var shortUrl = result.id.toString(36);
               $('#shortToOriginaldetail').html('<p>shorten URL:'+shortUrl+'</p>'+
-              '<p>Orginal URL:<a href="http://'+result.url+'">'+result.url+'</a></p>');
+              '<p>shorten:<a href="http://'+result.url+'">'+result.url+'</a></p>');
             },type: "post"
           });
           $('#shortUrl').val("");
